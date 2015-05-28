@@ -1,0 +1,1 @@
+angular.module('JobApp',['ngRoute', 'ngResource','angular-timeline']);
