@@ -1,6 +1,7 @@
 var mongoose = require('mongoose'),
 	Schema = mongoose.Schema,
-	db 	= mongoose.connect('mongodb://localhost/JobAppDB');
+	//db 	= mongoose.connect('mongodb://localhost/JobAppDB');
+	db = "mongodb://jobapp:jobapp@ds041032.mongolab.com:41032/jobapp";
 
 
 var timeLineModel = new Schema({
