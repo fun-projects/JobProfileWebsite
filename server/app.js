@@ -10,7 +10,7 @@ app.use('/', express.static(path.join(__dirname,'./../public')));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use('/',routes);
-/*
+
 //create and start server
 var port   = process.env.PORT || 3000;
 var server = app.listen(3000, function () {
@@ -21,5 +21,5 @@ var server = app.listen(3000, function () {
   console.log('Job App listening at http://%s:%s', host, port);
 
 });
-*/
-module.exports = app;
+
+//module.exports = app;
