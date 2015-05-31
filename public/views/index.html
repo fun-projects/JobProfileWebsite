@@ -7,17 +7,11 @@
   <link rel="stylesheet" href="/bower_components/angular-timeline/dist/angular-timeline-bootstrap.css" />
   </head>
   <body>
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <div class="navbar-brand">
-            <a href="/#/">HOME</a>
-          </div>
-
-        </div>
-        <nw-page-nav></nw-page-nav>
-      </div>
-    </nav>
+    <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a href="/#/jobapp">Time Line</a></li>
+        <li role="presentation"><a href="/#/jobapp">Projects</a></li>
+        <li role="presentation"><a href="/#/jobapp">Certifications</a></li>
+    </ul>
     <div ng-view class="container-fluid"></div>
   </body>
   <!-- vendor -->
@@ -33,10 +27,14 @@
   
   <!-- Controllers -->
   <script src="controllers/sampleController.js"></script>
+  <script src="controllers/timeLineController.js"></script>
 
   <!-- Services-->
    <script src="services/sampleService.js"></script>
+   <script src="services/TimeLineService.js"></script>
+   
 
   <!-- Directives-->
-
+  <script src="directives/displayTimeLine.js"></script>
+  
 </html>

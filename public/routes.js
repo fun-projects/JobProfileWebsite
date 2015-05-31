@@ -1,7 +1,10 @@
 angular.module('JobApp').config(function($routeProvider){
   $routeProvider
     .when('/', {
-      templateUrl: "templates/sample.html",
-      controller: "SampleCntrl"
+    	redirectTo:'/jobapp'
+    })
+    .when('/jobapp',{
+    	templateUrl: "templates/showTimeLine.html",
+    	controller:"timeLineCntrl"
     })
 });
