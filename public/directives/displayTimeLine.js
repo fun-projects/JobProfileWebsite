@@ -6,7 +6,7 @@ angular.module('JobApp').directive("displayTimeLine", function(){
 			$scope.clickTimeLine = function(){
 				switch($scope.timeline.type){
 					case "project":
-						$location.path("/projects/edit/"+$scope.timeline._id);
+						$location.path("/projects/view/"+$scope.timeline._id);
 
 				}
 			}

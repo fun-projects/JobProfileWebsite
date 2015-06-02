@@ -19,4 +19,12 @@ angular.module('JobApp').config(function($routeProvider){
     	templateUrl:"templates/editProject.html",
     	controller:"editProjectCntrl"
     })
+    .when('/projects/delete/:id',{
+        controller:"deleteProjectCntrl",
+        template: " "
+    })
+    .when('/projects/view/:id',{
+        controller:"viewProjectCntrl",
+        templateUrl:"templates/viewProject.html"
+    })
 });

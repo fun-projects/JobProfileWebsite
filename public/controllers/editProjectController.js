@@ -2,7 +2,6 @@ angular.module('JobApp').controller('editProjectCntrl',function($scope,$location
 	$scope.project 	= Projects.get({id:$routeParams.id});
 	$scope.timeline = TimeLine.get({id:$routeParams.id});
 	$scope.isSubmitting = false;
-	
 	$scope.saveProject = function(project,timeline){
     	$scope.isSubmitting = true;
     	Projects.update({id:project._id},project);
