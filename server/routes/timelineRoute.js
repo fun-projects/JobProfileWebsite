@@ -27,7 +27,7 @@ var timeline = function(route){
 		});
 	})
 	.get('/timeline/:id',function(req,res){
-		TimeLine.find({_id:req.params.id},function(err,data){
+		TimeLine.findOne({_id:req.params.id},function(err,data){
 			if(err)
 				res.status(500).send(err);
 			else

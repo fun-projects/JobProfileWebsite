@@ -8,8 +8,8 @@
   </head>
   <body>
     <ul class="nav nav-tabs">
-        <li role="presentation" class="active"><a href="/#/jobapp">Time Line</a></li>
-        <li role="presentation"><a href="/#/jobapp">Projects</a></li>
+        <li role="presentation"><a href="/#/timeline">Time Line</a></li>
+        <li role="presentation"><a href="/#/projects">Projects</a></li>
         <li role="presentation"><a href="/#/jobapp">Certifications</a></li>
     </ul>
     <div ng-view class="container-fluid"></div>
@@ -26,15 +26,17 @@
   <script src="routes.js"></script>
   
   <!-- Controllers -->
-  <script src="controllers/sampleController.js"></script>
-  <script src="controllers/timeLineController.js"></script>
+  <script src="controllers/showTimeLineController.js"></script>
+  <script src="controllers/showProjectsController.js"></script>
+  <script src="controllers/addProjectController.js"></script>
+  <script src="controllers/editProjectController.js"></script>
 
   <!-- Services-->
-   <script src="services/sampleService.js"></script>
    <script src="services/TimeLineService.js"></script>
+   <script src="services/ProjectsService.js"></script>
    
 
   <!-- Directives-->
   <script src="directives/displayTimeLine.js"></script>
-  
+  <script src="directives/displayProject.js"></script>
 </html>

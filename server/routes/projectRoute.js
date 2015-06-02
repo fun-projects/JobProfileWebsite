@@ -27,7 +27,7 @@ var project = function(route){
 		});
 	})
 	.get('/project/:id',function(req,res){
-		Project.find({_id:req.params.id},function(err,data){
+		Project.findOne({_id:req.params.id},function(err,data){
 			if(err)
 				res.status(500).send(err);
 			else

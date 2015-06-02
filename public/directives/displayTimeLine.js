@@ -2,15 +2,13 @@ angular.module('JobApp').directive("displayTimeLine", function(){
 	return {
 		restrict: "E",
 		templateUrl: "templates/timeLine.html",
-		scope:{
-			id:'@',
-			title:'@',
-			description:'@',
-			redirect:'@'
-		},
-		controller:function($scope){
+		controller:function($scope,$location){
 			$scope.clickTimeLine = function(){
-				console.log($scope.id);
+				switch($scope.timeline.type){
+					case "project":
+						$location.path("/projects/edit/"+$scope.timeline._id);
+
+				}
 			}
 		}
 
