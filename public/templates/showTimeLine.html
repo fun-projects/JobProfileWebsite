@@ -1,6 +1,8 @@
-
-<div class="list-group" ng-repeat="timeline in timelineobjs">
-	<div  class="list-group-item">
-		<display-time-line> </display-time-line>
-	<div>
+<div class="container">
+	<ul class="timeline">
+  		<li class="display-time-line" 
+  		ng-class="{'timeline-inverted': $even }"
+		ng-repeat="timeline in timelineobjs">	
+    	</li>
+	</ul>
 </div>

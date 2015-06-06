@@ -1,7 +1,8 @@
 angular.module('JobApp').directive("displayTimeLine", function(){
 	return {
-		restrict: "E",
+		restrict: "EAC",
 		templateUrl: "templates/timeLine.html",
+		transclude: true,
 		controller:function($scope,$location){
 			$scope.clickTimeLine = function(){
 				switch($scope.timeline.type){

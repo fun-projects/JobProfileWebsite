@@ -9,6 +9,7 @@
   "license": "MIT",
   "dependencies": {
     "angular-timeline": "~1.2.1",
-    "bootstrap": "~3.3.4"
+    "bootstrap": "~3.3.4",
+    "angular-bootstrap": "~0.13.0"
   }
 }
