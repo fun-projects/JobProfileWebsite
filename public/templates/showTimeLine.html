@@ -2,7 +2,7 @@
 	<ul class="timeline">
   		<li class="display-time-line" 
   		ng-class="{'timeline-inverted': $even }"
-		ng-repeat="timeline in timelineobjs">	
+		ng-repeat="timeline in timelineobjs | orderBy:'-date'">	
     	</li>
 	</ul>
 </div>
