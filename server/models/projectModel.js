@@ -9,7 +9,8 @@ var projectModel = new Schema({
 	url:String,
 	startDate:Date,
 	endDate:Date,
-	teamMembers:[String]
+	teamMembers:[String],
+	tags:[String]
 });
 
 module.exports  = mongoose.model('projects',projectModel);

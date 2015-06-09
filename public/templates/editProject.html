@@ -1,42 +1,50 @@
 <form  ng-submit="saveProject(project,timeline)">
-  <div class="panel panel-default col-md-7">
-    <fieldset class="form-group">
-      <label for="tname">Timeline Title</label>
-      <input class="form-control" type="text" id="tname" name="tname" ng-model="timeline.title" required>
+   <div class="panel panel-default">
+    <div class="col-md-6">
+      <fieldset class="form-group">
+        <label for="tname">Timeline Title</label>
+        <input class="form-control" type="text" id="tname" name="tname" ng-model="timeline.title" required>
+      </fieldset>
+      <fieldset class="form-group">
+        <label for="description">Timeline Description</label>
+        <textarea class="form-control" type="text" id="tdescription" name="tdescription" ng-model="timeline.description" required></textarea>
+      </fieldset>
+      <fieldset class="form-group">
+        <label for="timelineDate">Timeline Date</label>
+        <input type="date" id="timelineDate" name="timelineDate" ng-model="timeline.date" required/>
+      </fieldset>
+    </div>
+    <div calss="col-md-6 col-md-offset-6">
+      <fieldset class="form-group">
+        <label for="name">Project Title</label>
+        <input class="form-control" type="text" id="name" name="name" ng-model="project.name" required>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <label for="description">Project Description</label>
+        <textarea class="form-control" type="text" id="description" name="description" ng-model="project.description" required></textarea>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <label for="tags">Hash Tags (seperate with comma)</label>
+        <textarea class="form-control" type="text" id="tags" name="tags" ng-model="project.tags" ng-list></textarea>
+      </fieldset>
+      <div class="col-md-offset-6">
+        <fieldset class="form-group">
+          <label for="teamMembers">Project Team Members (seperate with comma)</label> 
+          <textArea class="form-control" type="text" name="teamMembers" id="teamMembers" ng-model="project.teamMembers" ng-list>
+          </textArea>
+        </fieldset>
+      </div>
+    </div>
+    <div class="col-md-offset-6">
+     <fieldset class="form-group">
+      <label for="startDate">Project Start Date</label>
+      <input type="date" id="startDate" name="startDate" ng-model="project.startDate" required/>
+      <label class="col-md-offset-1" for="endDate">Project End Date</label>
+      <input type="date" id="endDate" name="endDate" ng-model="project.endDate" />
     </fieldset>
-
-    <fieldset class="form-group">
-      <label for="description">Timeline Description</label>
-      <textarea class="form-control" type="text" id="tdescription" name="tdescription" ng-model="timeline.description" required></textarea>
-    </fieldset>
-
-    <fieldset class="form-group">
-      <label for="timelineDate">Timeline Date</label>
-      <input type="date" id="timelineDate" name="timelineDate" ng-model="timeline.date" required/>
-    </fieldset>
-
-  <fieldset class="form-group">
-    <label for="name">Project Title</label>
-    <input class="form-control" type="text" id="name" name="name" ng-model="project.name" required>
-  </fieldset>
-
-  <fieldset class="form-group">
-    <label for="description">Project Description</label>
-    <textarea class="form-control" type="text" id="description" name="description" ng-model="project.description" required></textarea>
-  </fieldset>
-
-  <fieldset class="form-group">
-    <label for="teamMembers">Team Members (seperate with comma)</label> 
-    <textArea class="form-control" type="text" name="teamMembers" id="teamMembers" ng-model="project.teamMembers" ng-list>
-    </textArea>
-  </fieldset>
-
-  <fieldset class="form-group">
-    <label for="startDate">Start Date</label>
-    <input type="date" id="startDate" name="startDate" ng-model="project.startDate" required/>
-    <label class="col-md-offset-1" for="endDate">End Date</label>
-    <input type="date" id="endDate" name="endDate" ng-model="project.endDate" />
-  </fieldset>
+  </div>
   <input type="submit" value="{{isSubmitting ? 'saving...' : 'Save'}}" class="btn btn-success" ng-disabled="isSubmitting">
 </div>
 </form>

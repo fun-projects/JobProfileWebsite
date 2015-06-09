@@ -12,9 +12,13 @@
         <small class="list-group-item-heading">{{project.startDate | date:'medium'}}</small>
         <small class="list-group-item-heading col-md-offset-3">{{project.endDate | date:'medium'}}</small>
       </div>
-      <div class="list-group-item">
+      <div class="list-group-item" ng-show="project.teamMembers.length != 0">
         <p class="list-group-item-text">Team</p>
         <small class="list-group-item-heading">{{project.teamMembers.join()}}</small>
+      </div>
+      <div class="list-group-item" ng-show="project.tags.length != 0">
+        <p class="list-group-item-text">Tags</p>
+        <small class="list-group-item-heading">{{project.tags.join()}}</small>
       </div>
     </div>
   <div class="panel-footer">

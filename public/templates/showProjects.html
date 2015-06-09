@@ -1,6 +1,6 @@
 <a href="#/projects/add" class="btn btn-info btn-lg">
           <span class="glyphicon glyphicon-plus"></span> Add Project 
 </a>
-<div class="col-md-9" ng-repeat="project in projects">
+<div class="col-md-9" ng-repeat="project in projects| orderBy:'-startDate'">
 	<display-project> </display-projects>
 </div>
