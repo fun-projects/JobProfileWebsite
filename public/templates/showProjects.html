@@ -6,7 +6,7 @@
 		</a>
 	</div>
 	<div class="col-md-3 form-group">
-		Search Tags: <input type='text' ng-model="search.input">
+		Search By Tags: <input type='text' ng-model="search.input">
 	</div>
 
 	<div class="col-md-9" ng-repeat="project in projects| orderBy:'-startDate'|tagFilter:search.input">
