@@ -1,0 +1,30 @@
+<form ng-submit="save(about)">
+	<div class="panel panel-default">
+    <div class="col-md-6">
+      <fieldset class="form-group">
+        <label >Name</label>
+        <input class="form-control" type="text" ng-model="about.name" required>
+      </fieldset>
+      <fieldset class="form-group">
+        <label >Current Role</label>
+        <input class="form-control" type="text" ng-model="about.currentrole" required>
+      </fieldset>
+      <fieldset class="form-group">
+        <label >Company Name</label>
+        <input class="form-control" type="text" ng-model="about.companyname" required>
+      </fieldset>
+      <fieldset class="form-group">
+        <label >Place</label>
+        <input class="form-control" type="text" ng-model="about.place" required>
+      </fieldset>
+      <fieldset class="form-group">
+        <label >Summary</label>
+        <textarea class="form-control" type="text" ng-model="about.summary" required></textarea>
+      </fieldset>
+      <div class="panel-footer">
+        <input type="submit" value="Save" class="btn btn-success" ng-disabled="isSubmitting">
+    </div>
+    </div>
+    </div>
+
+</form>

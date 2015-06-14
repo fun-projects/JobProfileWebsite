@@ -32,5 +32,9 @@ angular.module('JobApp').config(function($routeProvider){
         controller:"viewAboutCntrl",
         templateUrl:"templates/about.html"
     })
+     .when('/about/add',{
+        templateUrl:"templates/addAbout.html",
+        controller:"addAboutCntrl"
+    })
 
 });

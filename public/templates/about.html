@@ -1,8 +1,16 @@
+<div>
+    <div class="col-md-8 form-group">
+         <a href="#/about/add" class="btn btn-info">
+          <span class="glyphicon "></span> Add Your Summary 
+        </a>
+    </div>
+</div>
+
 <div class="timeline-badge"><i 
 	ng-class="{'glyphicon glyphicon-file': (timeline.type=='project') };">
 	</i></div>
 <div class="timeline-panel">
-	<div class="timeline-heading">
+	<div>
         <h3 class="timeline-title">{{user.name}}</h3>
         <h4 class="timeline-title">{{user.currentRole}}</h4>
         <h4 class="timeline-title">{{user.comapnyname}}</h4>
@@ -12,10 +20,7 @@
         <p>{{user.place}}</p>
     </div>
     <div class="timeline-body">
-        <p>{{User.summary}}</p>
+        <p>{{user.summary}}</p>
     </div>
-     <div class="panel-footer">
-    <input type="submit" value="Edit" class="btn btn-warning" ng-click="editProject()">
-    <input type="submit" value="Delete" class="btn btn-danger" ng-click="deleteProject()">
-  </div>
+     
 </div>
