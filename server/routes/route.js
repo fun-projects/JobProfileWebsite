@@ -10,7 +10,7 @@ router.get('/', function(req, res) {
 
 require('./timelineRoute')(router);
 require('./projectRoute')(router);
-require('./AboutRoute')(router);
+//require('./aboutRoute')(router);
 
 
 

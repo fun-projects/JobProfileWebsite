@@ -28,4 +28,9 @@ angular.module('JobApp').config(function($routeProvider){
         controller:"viewProjectCntrl",
         templateUrl:"templates/viewProject.html"
     })
+    .when('/about',{
+        controller:"viewAboutCntrl",
+        templateUrl:"templates/about.html"
+    })
+
 });
