@@ -1,4 +1,4 @@
-var User = require('../models/AboutModel');
+//var User = require('../models/AboutModel');
 //
 var About = require('../models/AboutModel');
 
