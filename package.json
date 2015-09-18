@@ -20,5 +20,8 @@
     "gulp": "^3.8.11",
     "gulp-nodemon": "^2.0.3",
     "mongoose": "^4.0.3"
+  },
+  "devDependencies": {
+    "jsonwebtoken": "^5.0.5"
   }
 }
