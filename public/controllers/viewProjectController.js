@@ -1,5 +1,5 @@
-angular.module('JobApp').controller('viewProjectCntrl',function($scope,$location, $routeParams,Projects){
-	$scope.project 	= Projects.get({id:$routeParams.id});
+angular.module('JobApp').controller('viewProjectCntrl',function($scope,$location, $stateParams,Projects){
+	$scope.project 	= Projects.get({id:$stateParams.id});
 	$scope.deleteProject = function(){
 		$location.path('/projects/delete/'+$scope.project._id);
 	};

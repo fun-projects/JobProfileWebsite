@@ -11,22 +11,25 @@
   <body>
       <div class='navbar navbar-default navbar-fixed-top'>
       <div class='container'>
-        <a href='/#/timeline' class='navbar-brand'>My TimeLine</a>
+        <a ui-sref='timeline' class='navbar-brand'>My TimeLine</a>
         <ul class='nav navbar-nav navbar-right'>
-          <li><a href='/#/projects'>Projects</a></li>
-          <li><a href='/#/certification'>Certifications</a></li>
-          <li><a href='/#/about'>About</a></li>
+          <li><a ui-sref='projects'>Projects</a></li>
+          <li><a ui-sref='certification'>Certifications</a></li>
+          <li><a ui-sref='about'>About</a></li>
         </ul>
       </div>
     </div>
-    <div ng-view class="container-fluid"></div>
+    <div ui-view class="container-fluid"></div>
+
   </body>
   <!-- vendor -->
   <script src="/bower_components/jquery/dist/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-resource.min.js"></script>
+
   <script src="/bower_components/angular-timeline/dist/angular-timeline.js"></script>
   <script src="/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
   <script src="/bower_components/moment/moment.js"></script>
@@ -43,15 +46,21 @@
   <script src="controllers/editProjectController.js"></script>
   <script src="controllers/deleteProjectController.js"></script>
   <script src="controllers/viewProjectController.js"></script>
+  <script src="controllers/viewAboutController.js"></script>
+  <script src="controllers/addAboutController.js"></script>
+  <script src="controllers/showAboutController.js"></script>
+  <script src="controllers/deleteAboutController.js"></script>
 
   <!-- Services-->
    <script src="services/TimeLineService.js"></script>
    <script src="services/ProjectsService.js"></script>
+   <script src="../services/AboutService.js"></script>
    
 
   <!-- Directives-->
   <script src="directives/displayTimeLine.js"></script>
   <script src="directives/displayProject.js"></script>
+  <script src="../directives/displayAbout.js"></script>
 
   <!--Filters-->
   <script src="filters/tagFilter.js"></script>
