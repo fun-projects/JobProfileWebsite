@@ -1,5 +1,6 @@
 var gulp 	= require('gulp'),
-	nodemon = require('gulp-nodemon');
+	nodemon = require('gulp-nodemon'),
+ iife = require('gulp-iife');
 
 
 gulp.task('default',function(){
@@ -15,4 +16,15 @@ gulp.task('default',function(){
 	.on('restart',function(){
 		console.log('restarting...')
 	});
+	return gulp.src(['public/controllers/**/*.js','public/directives/**/*.js','public/services/**/*.js'])
+		.pipe(iife({
+			prependSemicolon: false
+		}))
+		.pipe(gulp.dest("dist"));
 });
+
+
+
+
+
+

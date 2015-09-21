@@ -1,9 +1,10 @@
 
 <div>
 	<div class="col-md-8 form-group">
-		 <a href="#/projects/add" class="btn btn-info">
+		 <a ui-sref=".add" class="btn btn-info">
           <span class="glyphicon glyphicon-plus"></span> Add Project 
 		</a>
+		<div ui-view> </div>
 	</div>
 	<div class="col-md-3 form-group">
 		Search By Tags: <input type='text' ng-model="search.input">
@@ -12,4 +13,4 @@
 	<div class="col-md-9" ng-repeat="project in projects| orderBy:'-startDate'|tagFilter:search.input">
 			<display-project> </display-projects>
 	</div>
-<div>
+</div>

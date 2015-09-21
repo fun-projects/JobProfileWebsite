@@ -3,11 +3,12 @@ angular.module('JobApp').directive("displayTimeLine", function(){
 		restrict: "EAC",
 		templateUrl: "templates/timeLine.html",
 		transclude: true,
-		controller:function($scope,$location){
+		controller:function($scope,$location,$state){
 			$scope.clickTimeLine = function(){
 				switch($scope.timeline.type){
 					case "project":
-						$location.path("/projects/view/"+$scope.timeline._id);
+						//$location.path("/projects/view/"+$scope.timeline._id);
+						$state.go('projects.view',{id: $scope.timeline._id});
 
 				}
 			}

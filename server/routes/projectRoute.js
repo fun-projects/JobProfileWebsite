@@ -1,4 +1,6 @@
 var Project = require('../models/projectModel');
+var jwt = require('express-jwt');
+var auth = jwt({secret: 'SECRET', userProperty: 'payload'});
 
 var project = function(route){
 	route
@@ -9,7 +11,7 @@ var project = function(route){
 		}
 		nxt();
 	})
-	.get('/project',function(req,res){
+	.get('/project', function(req,res){
 		Project.find({},function(err,data){
 			if(err)
 				res.status(500).send(err);
@@ -17,8 +19,9 @@ var project = function(route){
 				res.status(200).send(data);
 		});	
 	})
-	.post('/project',function(req,res){
+	.post('/project', auth, function(req,res){
 		var project = new Project(req.body);
+			project.author = req.payload.username;
 		project.save(function(err,data){
 			if(err)
 				res.status(500).send(err);
