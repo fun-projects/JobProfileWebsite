@@ -22,7 +22,6 @@
     "gulp-nodemon": "^2.0.3",
     "mongoose": "^4.0.3",
     "passport": "^0.3.0",
-    "passport-google-oauth": "^0.2.0",
     "passport-local": "^1.0.0"
   },
   "devDependencies": {
