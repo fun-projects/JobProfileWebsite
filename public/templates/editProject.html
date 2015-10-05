@@ -1,8 +1,9 @@
+<hr>
 <form  ng-submit="saveProject(project,timeline)">
    <div class="panel panel-default">
     <div class="col-md-6">
       <fieldset class="form-group">
-        <label for="tname">Timeline Title</label>
+          <label for="tname">Timeline Title</label>
         <input class="form-control" type="text" id="tname" name="tname" ng-model="timeline.title" required>
       </fieldset>
       <fieldset class="form-group">
@@ -45,6 +46,9 @@
       <input type="date" id="endDate" name="endDate" ng-model="project.endDate" />
     </fieldset>
   </div>
+       <div class="panel-footer">
   <input type="submit" value="{{isSubmitting ? 'saving...' : 'Save'}}" class="btn btn-success" ng-disabled="isSubmitting">
+       <a role="button" ui-sref="timeline" class="btn btn-danger">Cancel</a>
+       </div>
 </div>
 </form>

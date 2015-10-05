@@ -1,1 +1,1 @@
-angular.module('JobApp',['ngRoute', 'ngResource','angular-timeline','ui.bootstrap','angularMoment']);
+angular.module('JobApp',['ui.router', 'ngResource','angular-timeline','ui.bootstrap','angularMoment']);

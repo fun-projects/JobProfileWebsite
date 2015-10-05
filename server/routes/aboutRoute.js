@@ -2,9 +2,9 @@
 //
 var About = require('../models/AboutModel');
 
-var About = function (route){
+var about = function (route){
 	route
-	.use('/About/:id',function(req,res,nxt){
+	.use('/about/:id',function(req,res,nxt){
 		if(req.params.id== null){
 	   			res.status(500).send({message:'Invalid request'});
 	   			nxt();
@@ -12,24 +12,28 @@ var About = function (route){
 	       }
 	 		nxt();
      })
-     .get('/About',function(req,res){
+     .get('/about',function(req,res){
         About.find({},function(err,data){
+			console.log("Inside About GET");
          if(err)
             res.status(500).send(err);
          else
+		 console.log(data);
             res.status(200).send(data);
         });
      })
-      .post('/About',function(req,res){
-      	var About = new About(req.body);
-      	About.save(function(err,data){
-      		if(err)
+      .post('/about',function(req,res){
+			console.log(req.body);
+      	var about = new About(req.body);
+      	about.save(function(err,data){
+      		if(err) {
+				console.log(err);
 				res.status(500).send(err);
-			else
+			}else
 				res.status(200).send(data);
       	});
       })
-      .put('/About/:id',function(req,res){
+      .put('/about/:id',function(req,res){
 		About.update({_id:req.params.id},req.body,function(err,data){
 			if(err)
 				res.status(500).send(err);
@@ -37,7 +41,7 @@ var About = function (route){
 				res.status(200).send(data);
 		});
 	 })
-      .delete('/About/:id',function(req,res){
+      .delete('/about/:id',function(req,res){
       	About.remove({_id:req.params.id},function(err,data){
       		if(err)
       			res.status(500).send(err);
@@ -47,4 +51,4 @@ var About = function (route){
       });
  }
 
- module.exports = About;
+ module.exports = about;
